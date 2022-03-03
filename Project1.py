@@ -1,35 +1,23 @@
-from Crypto.Cipher import AES
+from Cryptodome.Cipher import AES
 
 starterKey = bytearray(b'\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-integer = 0
 
-for i in range(16,777,215)
-    integer = integer+1
-    # key = starterKey.append(integer)
+for i in range(16,777,215):
+    key1 = starterKey + i.to_bytes(3,'big')
+    print(key1)
     # Test if deciphered message equals our plaintext mesage
     # if they do exit loop
-    # if not del key[12,15]
+    # if not reset key
 
-key1 = key
-key = 0 # reset the key for next test
-integer = 0
-for i in range(16,777,215)
-    integer = integer+1
-    # key = starterKey.append(integer)
+for i in range(16,777,215):
+    key2 = starterKey + i.to_bytes(3,'big')
     # Test if deciphered message equals our plaintext mesage
     # if they do exit loop
-    # if not del key[12,15]
-key2 = key
-key = 0 # reset the key for next test
-integer = 0
-for i in range(16,777,215)
-    integer = integer+1
-    # key = starterKey.append(integer)
+    
+for i in range(16,777,215):
+    key3 = starterKey + i.to_bytes(3,'big')
     # Test if deciphered message equals our plaintext mesage
-    # if they do exit loop
-    # if not del key[12,15]
-key3 = key
-key = 0 # reset the key for next test     
+    # if they do exit loop   
 
-cipher = AES.new(key, AES.MODE_EAX);
+# cipher = AES.new(key, AES.MODE_EAX);
 
