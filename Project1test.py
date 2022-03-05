@@ -20,11 +20,11 @@ def funnyDecryptTime(ptxt,ctxt,nonce):
  # Read in cipher, plaintext, and nonce 
 for n in range(3):
     plaintext = input("Enter what file is the plaintext: ")
-    plaintextFile = read_file(plaintext)
+    plaintextFile = read_file(fn = plaintext)
     print(plaintextFile)
     ciphertext = input("Enter what file is the ciphertext: ")
-    ciphertextFile = read_bytes(ciphertext)
+    ciphertextFile = read_bytes(fn = ciphertext)
     nonce = input("Enter what file is the nonce: ")
-    nonceFile = read_bytes(ciphertext)
+    nonceFile = read_bytes(fn = nonce)
     funnyDecryptTime(plaintextFile,ciphertextFile,nonceFile)
 
