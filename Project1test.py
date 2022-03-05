@@ -10,8 +10,8 @@ def funnyDecryptTime(ptxt,ctxt,nonce):
     for i in range(16777215):
         key = starterKey + i.to_bytes(3,'big')
         pt = decryptor_CTR(ctxt = ctxt, nonce = nonce, key = key)
-        if ptxt == pt:
-            print("I have the golden ticket!")
+        if string_to_bytes(string_value = ptxt) == pt:
+            print("Key: " + str(key) + "Message: " + str(pt))
             return None
         if (i%838860) == 0:
             print(str(percent) + "% done")
