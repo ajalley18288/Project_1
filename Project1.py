@@ -14,7 +14,7 @@ def funnyDecryptTime(ptxt,ctxt,nonce):
             print("Key: " + key.hex() + " Message: " + pt.decode('utf-8').encode('cp1252').decode('utf-8'))
             return None
         if (i%335544) == 0:
-            print(str(percent) + "% done")
+            print(str(percent) + "% of keys searched")
             print(key.hex() + " Key currently being run")
             percent = percent + 2;
             
